@@ -21,10 +21,8 @@ async def download_file(link):
 
 
 async def foo():
-    for link in links_wl:
-        asyncio.create_task(download_file(link))
+    await asyncio.gather(*(download_file(link) for link in links_wl))
 
 
 def main_asyncio():
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(foo())
+    asyncio.run(foo())
