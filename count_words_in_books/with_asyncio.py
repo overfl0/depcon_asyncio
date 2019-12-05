@@ -17,7 +17,7 @@ async def download_file(link):
     async with aiohttp.ClientSession() as session:
         async with session.get(link) as resp:
             data = await resp.text()
-            asyncio.create_task(count_words(data))
+            await count_words(data)
 
 
 async def foo():
