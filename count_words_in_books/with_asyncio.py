@@ -1,7 +1,7 @@
 import asyncio
 import aiohttp
 
-from common import links_wl
+from count_words_in_books.common import links_wl
 
 
 async def count_words(text):

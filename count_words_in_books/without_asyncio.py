@@ -1,4 +1,4 @@
-from common import links_wl
+from count_words_in_books.common import links_wl
 from urllib.request import urlopen
 
 
