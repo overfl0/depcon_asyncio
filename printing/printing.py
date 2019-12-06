@@ -1,20 +1,17 @@
 import asyncio
 
 
-async def foo():
+# TODO: Create asynchronous function foo()
     while True:
-        await asyncio.sleep(2)
+        # TODO: Sleep for 2 seconds
         print('foo')
 
 
-async def bar():
+# TODO: Create asynchronous function bar()
     while True:
-        await asyncio.sleep(3)
+        # TODO: Sleep for 3 seconds
         print('bar')
 
 
 if __name__ == '__main__':
-    loop = asyncio.get_event_loop()
-    loop.create_task(foo())
-    loop.create_task(bar())
-    loop.run_forever()
+    # Run foo() and bar() ad infinitum defecatum

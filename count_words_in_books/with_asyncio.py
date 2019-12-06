@@ -3,26 +3,12 @@ import aiohttp
 
 from count_words_in_books.common import links_wl
 
+# HINT: use aiohttp.ClientSession() as session
 
-async def count_words(text):
-    wordcount = {}
-    for word in text.split():
-        if word not in wordcount:
-            wordcount[word] = 1
-        else:
-            wordcount[word] += 1
+# TODO: create count_words function
 
-
-async def download_file(link):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(link) as resp:
-            data = await resp.text()
-            await count_words(data)
-
-
-async def foo():
-    await asyncio.gather(*(download_file(link) for link in links_wl))
-
+# TODO: Download file function
 
 def main_asyncio():
-    asyncio.run(foo())
+    # TODO: run stuff
+    # TODO: Download all the links_wl and count them
